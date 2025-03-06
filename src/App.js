@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   const getGreeting = () => {
-    fetch(`http://localhost:3001/api/greet?name=${name}`)
+    fetch(`https://backend-4wiv.onrender.com/api/greet?name=${name}`)
       .then((response) => response.json())
       .then((data) => setMessage(data.message || data.error))
       .catch((err) => console.log(err));
